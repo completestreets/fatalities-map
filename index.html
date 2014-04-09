@@ -16,75 +16,85 @@
     <![endif]-->
   </head>
   <body>
-    <div class='navbar navbar-default navbar-static-top'>
-      <div class='container'>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+   <!-- 
+ 
+  <div class='navbar navbar-default navbar-static-top'>
+	<div class='container'>
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class='navbar-brand' href='index.html'>Pedestrian Fatalities from NHTSA Fatality Analysis Reporting System</a>
-        </div>
-        <div class="navbar-collapse collapse">
+       </div>
+      <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class='active'><a href="index.html">Map</a></li>
             <li><a href="#">About</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div> 
       </div>
     </div>
-    <div class='container'>
+ -->
+    
+    <div class='container-fluid'>
       <div class='row'>
-        <div class='col-md-3'>
-          <p>A searchable map of pedestrian fatalities in the United States between 2003 and 2012, as reported by the National Highway Traffic Safety Administration's <a href="http://www-fars.nhtsa.dot.gov/Main/index.aspx">Fatality Analysis Reporting System</a>.</p>
+        <div class='col-md-10'>
+        
+        <!-- <p>A searchable map of pedestrian fatalities in the United States between 2003 and 2012, as reported by the National Highway Traffic Safety Administration's <a href="http://www-fars.nhtsa.dot.gov/Main/index.aspx">Fatality Analysis Reporting System</a>.</p>  -->
+    
           <div class='well'>
-          <h4>
-              Search location: <small>(<a id='find_me' href='#'>find me</a>)</small>
-            </h4>
-            <p>
-              <small><input class='form-control' id='search_address' placeholder='Enter an address/intersection' type='text' />
-              </small>
-            </p>
-            <p><small>
-              <label>
-                within
+        <form class="form-inline" role="form">  
+        <div class="form-group">
+            <label for="search_address">Search location: (<a id='find_me' href='#'>find me</a>) </label>
+            
+              <input class='form-control input-sm' id='search_address' placeholder='Enter an address/intersection' type='text' />
+            
+            </div>
+              <div class="form-group">
+              <label>&nbsp;
+                within&nbsp;
                 <select id='search_radius'>
                   <option value='16100'>10 miles</option>
                   <option value='80500' selected>50 miles</option>
-                 <option value='161000'>100 miles</option>
+                  <option value='161000'>100 miles</option>
                   <option value='805000'>500 miles</option>
                 </select>
-              </label></small>
-            </p>
-          
-            <a class='btn btn-primary' id='search' href='#'>
+              </label>
+              </div>  &nbsp;&nbsp;
+        <div class="form-group">
+            <div class="btn-group"><a class='btn btn-sm btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
               Search
             </a>
-            <a class='btn btn-default' id='reset' href='#'>
+            <a class='btn btn-sm btn-default' id='reset' href='#'>
               <i class='glyphicon glyphicon-repeat'></i>
               Reset
             </a>
-            <h4>
-  Year
-  <small>
-    <span id='year-selected-start'>2003</span>
+            </div>
+            </div>  &nbsp;&nbsp;
+ <div class="form-group">
+ Year: 
+ <small><span id='year-selected-start'>2003</span>
     -
     <span id='year-selected-end'>2012</span>
   </small>
-</h4>
-<div id='year-slider'></div>
+<div id='year-slider'>
+</div>
 
 <span class='pull-left'>2003</span>
 
 <span class='pull-right'>2012</span>
-			<br />
-			
           </div>
+          </div>
+          </form>
           <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
         </div>
-        <div class='col-md-9'>
+        </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-10'>
           <noscript>
             <div class='alert alert-info'>
               <h4>Your JavaScript is disabled</h4>
@@ -98,7 +108,7 @@
         </div>
       </div>
     </div>
-
+</div>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.address.js"></script>
@@ -110,7 +120,7 @@
       //<![CDATA[
         $(window).resize(function () {
           var h = $(window).height(),
-            offsetTop = 105; // Calculate the top offset
+           offsetTop = 105; // Calculate the top offset
         
           $('#map_canvas').css('height', (h - offsetTop));
         }).resize();
