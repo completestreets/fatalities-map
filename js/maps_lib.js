@@ -21,11 +21,11 @@ var MapsLib = {
 
   //the encrypted Table ID of your Fusion Table (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1Gh4gMgPYwh9BetbKwExrUanqPBUJH4DQlIBcsPwf",
+  fusionTableId:      "1aKJFPotx1y3p04XW3SkikodoLSrNzxyV4104unpO",
 
   //*New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
-  googleApiKey:       "AIzaSyC8fXqbCys70ouVJ_fzmndpiK1ZSfhy2Fo",
+  googleApiKey:       "AIzaSyAYyANBjl6Tgjrrkb14M4Tiew-PIR6ze6s",
 
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
