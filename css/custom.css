@@ -15,8 +15,7 @@ a:hover { color: #4B58A6; }
 
 /* Reset the container */
 .container {
-  width: 650px;
-  max-width: none !important;
+  width: 650px !important;
 }
 
 .filter-box { 
