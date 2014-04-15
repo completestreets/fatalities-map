@@ -1,3 +1,5 @@
+//pass query parameters to an iframe on the page from http://topliners.eloqua.com/docs/DOC-4138
+
 $(document).ready(function()  
 {  
     var loc = window.location.toString(),  
