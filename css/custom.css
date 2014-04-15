@@ -1,8 +1,22 @@
+body {
+  min-width: 650px;
+}
+
 a { color: #4B58A6; }
 a:hover { color: #4B58A6; }
 
 #map_canvas img {
   max-width: none;
+}
+#map_canvas { height: 500px;}
+
+.well { margin-bottom: 5px;}
+.alert {margin-top: 5px;}
+
+/* Reset the container */
+.container {
+  width: 650px;
+  max-width: none !important;
 }
 
 .filter-box { 
