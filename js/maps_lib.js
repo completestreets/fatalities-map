@@ -37,8 +37,8 @@ var MapsLib = {
   recordName:         "fatality",       //for showing number of results
   recordNamePlural:   "fatalities",
 
-  searchRadius:       8050,            //in meters ~ 5 miles
-  defaultZoom:        4,             //zoom level when map is loaded (bigger is more zoomed in)
+  searchRadius:       80500,            //in meters ~ 5 miles
+  defaultZoom:        3,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png',
   currentPinpoint:    null,
 
@@ -117,7 +117,20 @@ whereClause += " AND 'caseyear' <= '" + $("#year-selected-end").html() + "'";
           $.address.parameter('address', encodeURIComponent(address));
           $.address.parameter('radius', encodeURIComponent(MapsLib.searchRadius));
           map.setCenter(MapsLib.currentPinpoint);
-          map.setZoom(6);
+
+          if (MapsLib.searchRadius      >= 1610000) map.setZoom(04); // 1,000 miles
+          else if (MapsLib.searchRadius >= 805000)  map.setZoom(05); // 500 miles
+          else if (MapsLib.searchRadius >= 402500)  map.setZoom(06); // 250 miles
+          else if (MapsLib.searchRadius >= 161000)  map.setZoom(07); // 100 miles
+          else if (MapsLib.searchRadius >= 80500)   map.setZoom(08); // 50 miles
+          else if (MapsLib.searchRadius >= 40250)   map.setZoom(09); // 25 miles
+          else if (MapsLib.searchRadius >= 16100)   map.setZoom(11); // 10 miles
+          else if (MapsLib.searchRadius >= 8050)    map.setZoom(12); // 5 miles
+          else if (MapsLib.searchRadius >= 3220)    map.setZoom(13); // 2 miles
+          else if (MapsLib.searchRadius >= 1610)    map.setZoom(14); // 1 mile
+          else if (MapsLib.searchRadius >= 805)     map.setZoom(15); // 1/2 mile
+          else if (MapsLib.searchRadius >= 400)     map.setZoom(16); // 1/4 mile
+          else                                      map.setZoom(17);
 
           MapsLib.addrMarker = new google.maps.Marker({
             position: MapsLib.currentPinpoint,
