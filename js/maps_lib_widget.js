@@ -38,3 +38,24 @@ var MapsWidgetLib = {
     });
   }
 }
+
+$(function() {
+  geocoder = new google.maps.Geocoder();
+
+  $('#btn_search').click(function(){
+    MapsWidgetLib.doSearch();
+  });
+
+  $("#search_address").keydown(function(e){
+    var key =  e.keyCode ? e.keyCode : e.which;
+    if(key == 13) {
+      $('#btn_search').click();
+      return false;
+    }
+  });
+
+  $('#find_me').click(function(){
+    MapsWidgetLib.findMe(); 
+    return false;
+  });
+});
