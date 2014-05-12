@@ -20,9 +20,14 @@
       <div class='well'>
         <form class="form-inline" role="form">  
           <div class="form-group">
-           <!--  <label for="search_address">Search location: (<a id='find_me' href='#'>find me</a>) </label> -->
-            <input class='form-control' id='search_address' placeholder='Enter an address/intersection' type='text' />
-        
+            <div class="input-group" id='search_address_group'>
+              <input class='form-control' id='search_address' placeholder='Enter an address/intersection' type='text' />
+              <span class="input-group-btn">
+                <a class='btn btn-default' id='find_me' href='#'>
+                  <i class='glyphicon glyphicon-screenshot'></i>
+                </a>
+              </span>
+            </div>
           </div>
           <div class="form-group">
           <label>&nbsp;
