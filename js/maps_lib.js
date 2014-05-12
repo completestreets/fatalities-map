@@ -38,7 +38,7 @@ var MapsLib = {
   recordNamePlural:   "fatalities",
 
   searchRadius:       16100,         //in meters 10 miles
-  defaultZoom:        3,             //zoom level when map is loaded (bigger is more zoomed in)
+  defaultZoom:        4,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png',
   currentPinpoint:    null,
 
